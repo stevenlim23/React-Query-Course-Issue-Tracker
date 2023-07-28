@@ -9,9 +9,6 @@ export function Label({ label }) {
     (queryLabel) => queryLabel.id == label
   );
 
-  console.log("labelsQuery.data", labelsQuery.data);
-  console.log("label", label);
-
   if (!labelObj) return null;
 
   return <span className={`label ${labelObj.color}`}>{labelObj.name}</span>;

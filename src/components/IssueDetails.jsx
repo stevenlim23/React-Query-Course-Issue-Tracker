@@ -23,9 +23,6 @@ function useIssueComment(issueNumber) {
 const Comment = ({ comment, createdBy, createdDate }) => {
   const userQuery = useUserData(createdBy);
 
-  console.log(createdBy);
-  console.log(userQuery.data);
-
   if (userQuery.isLoading)
     return (
       <div className="comment">
