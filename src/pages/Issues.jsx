@@ -28,6 +28,7 @@ export default function Issues() {
               )
             }
           />
+
           <h3>Status</h3>
           <StatusSelect
             value={status}
