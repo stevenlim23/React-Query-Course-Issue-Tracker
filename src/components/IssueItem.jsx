@@ -7,6 +7,9 @@ import { useUserData } from "../helpers/useUserData";
 // Icon
 import { GoIssueOpened, GoIssueClosed, GoComment } from "react-icons/go";
 
+// Components
+import { Label } from "./Label";
+
 export const IssueItem = ({
   title,
   number,
@@ -34,9 +37,7 @@ export const IssueItem = ({
         <span>
           <Link to={`issue/${number}`}>{title}</Link>
           {labels.map((label) => (
-            <span key={label} className={`label red`}>
-              {label}
-            </span>
+            <Label key={label} label={label} />
           ))}
         </span>
         <small>
